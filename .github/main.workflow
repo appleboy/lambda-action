@@ -1,12 +1,10 @@
-# 🚀 lambda-action
+workflow "Deploy Lambda Function" {
+  on = "push"
+  resolves = [
+    "Upload Simple Lambda",
+  ]
+}
 
-[GitHub Action](https://developer.github.com/actions/) deploying Lambda code to an existing function
-
-## Usage
-
-Upload zip file to AWS Lambda function.
-
-```
 action "Upload Simple Lambda" {
   uses = "appleboy/lambda-action@master"
   secrets = [
@@ -19,4 +17,3 @@ action "Upload Simple Lambda" {
     "--zip-file", "output.zip",
   ]
 }
-```
