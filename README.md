@@ -1,2 +1,3 @@
-# lambda-action
-Deploying Lambda code  to an existing function
+# 🚀 lambda-action
+
+[GitHub Action](https://developer.github.com/actions/) deploying Lambda code to an existing function
