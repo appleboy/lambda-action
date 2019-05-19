@@ -89,6 +89,26 @@ action "Upload Simple Lambda" {
 }
 ```
 
+See more detail of arguments.
+
+```
+GLOBAL OPTIONS:
+   --region value             AWS Region (default: "us-east-1") [$PLUGIN_REGION, $AWS_REGION]
+   --access-key value         AWS ACCESS KEY [$PLUGIN_ACCESS_KEY, $AWS_ACCESS_KEY_ID]
+   --secret-key value         AWS SECRET KEY [$PLUGIN_SECRET_KEY, $AWS_SECRET_ACCESS_KEY]
+   --session-token value      AWS Session token [$PLUGIN_SESSION_TOKEN, $AWS_SESSION_TOKEN]
+   --aws-profile value        AWS profile [$PLUGIN_PROFILE, $AWS_PROFILE]
+   --function-name value      AWS lambda function name [$PLUGIN_FUNCTION_NAME, $FUNCTION_NAME]
+   --s3-bucket value          An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account. [$PLUGIN_S3_BUCKET, $S3_BUCKET]
+   --s3-key value             The Amazon S3 key of the deployment package. [$PLUGIN_S3_KEY, $S3_KEY]
+   --s3-object-version value  AWS lambda s3 object version [$PLUGIN_S3_OBJECT_VERSION]
+   --zip-file value           AWS lambda zip file [$PLUGIN_ZIP_FILE, $ZIP_FILE]
+   --source value             zip file list [$PLUGIN_SOURCE, $SOURCE]
+   --dry-run                  Set to true to validate the request parameters and access permissions without modifying the function code. [$PLUGIN_DRY_RUN, $DRY_RUN]
+   --help, -h                 show help
+   --version, -v              print the version
+```
+
 ## Secrets
 
 * `AWS_REGION` - aws region
