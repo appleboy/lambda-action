@@ -1,6 +1,8 @@
 # 🚀 lambda-action
 
-[GitHub Action](https://developer.github.com/actions/) deploying Lambda code to an existing function
+[GitHub Action](https://developer.github.com/actions/) for deploying Lambda code to an existing function
+
+<img src="images/lambda-workflow.png" />
 
 ## Usage
 
