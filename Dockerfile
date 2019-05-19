@@ -1,4 +1,4 @@
-FROM appleboy/drone-lambda:linux-amd64
+FROM appleboy/drone-lambda:1.1.1-linux-amd64
 
 # Github labels
 LABEL "com.github.actions.name"="AWS Lambda Deploy"
