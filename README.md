@@ -9,20 +9,23 @@
 Upload zip file to AWS Lambda function.
 
 ```
-action "Upload Simple Lambda" {
-  uses = "appleboy/lambda-action@master"
-  secrets = [
-    "AWS_ACCESS_KEY_ID",
-    "AWS_SECRET_ACCESS_KEY",
-    "AWS_REGION"
-  ]
-  args = [
-    "--function-name", "hello-world",
-    "--source", "main.go",
-    "--source", "source.go",
-    "--source", "extra.go",
-  ]
-}
+name: Upload Simple Lambda
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: AWS Lambda Deploy
+      uses: appleboy/lambda-action@v0.0.1
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: ${{ secrets.AWS_REGION }}
+      with:
+        args: --function-name hello-world --source main.go --source source.go --source extra.go
 ```
 
 ## Environment variables
@@ -38,55 +41,67 @@ action "Upload Simple Lambda" {
 zip source file and upload to aws lambda.
 
 ```
-action "Upload Simple Lambda" {
-  uses = "appleboy/lambda-action@master"
-  secrets = [
-    "AWS_ACCESS_KEY_ID",
-    "AWS_SECRET_ACCESS_KEY",
-    "AWS_REGION"
-  ]
-  args = [
-    "--function-name", "hello-world",
-    "--source", "main.go",
-    "--source", "source.go",
-    "--source", "extra.go",
-  ]
-}
+name: Upload Simple Lambda
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: AWS Lambda Deploy
+      uses: appleboy/lambda-action@v0.0.1
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: ${{ secrets.AWS_REGION }}
+      with:
+        args: --function-name hello-world --source main.go --source source.go --source extra.go
 ```
 
 upload single zip file.
 
 ```
-action "Upload Simple Lambda" {
-  uses = "appleboy/lambda-action@master"
-  secrets = [
-    "AWS_ACCESS_KEY_ID",
-    "AWS_SECRET_ACCESS_KEY",
-    "AWS_REGION"
-  ]
-  args = [
-    "--function-name", "hello-world",
-    "--zip-file", "output.zip",
-  ]
-}
+name: Upload Simple Lambda
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: AWS Lambda Deploy
+      uses: appleboy/lambda-action@v0.0.1
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: ${{ secrets.AWS_REGION }}
+      with:
+        args: --function-name hello-world --zip-file output.zip
 ```
 
 Set dry run mode to validate the request parameters and access permissions without modifying the function code.
 
 ```
-action "Upload Simple Lambda" {
-  uses = "appleboy/lambda-action@master"
-  secrets = [
-    "AWS_ACCESS_KEY_ID",
-    "AWS_SECRET_ACCESS_KEY",
-    "AWS_REGION"
-  ]
-  args = [
-    "--function-name", "hello-world",
-    "--zip-file", "output.zip",
-    "--dry-run",
-  ]
-}
+name: Upload Simple Lambda
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: AWS Lambda Deploy
+      uses: appleboy/lambda-action@v0.0.1
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: ${{ secrets.AWS_REGION }}
+      with:
+        args: --function-name hello-world --zip-file output.zip --dry-run
 ```
 
 See more detail of arguments.
