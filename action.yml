@@ -1,0 +1,36 @@
+name: 'AWS Lambda Deploy'
+description: 'Deploying Lambda code to an existing function'
+author: 'Bo-Yi Wu'
+inputs:
+  aws_region:
+    description: 'AWS Region'
+    default: 'us-east-1'
+  aws_access_key_id:
+    description: 'AWS ACCESS KEY'
+  aws_secret_access_key:
+    description: 'AWS SECRET KEY'
+  aws_session_token:
+    description: 'AWS Session token'
+  aws_profile:
+    description: 'AWS profile'
+  function_name:
+    description: 'AWS lambda function name'
+  s3_bucket:
+    description: 'An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.'
+  s3_key:
+    description: 'The Amazon S3 key of the deployment package.'
+  s3_object_version:
+    description: 'AWS lambda s3 object version'
+  zip_file:
+    description: 'AWS lambda zip file'
+  source:
+    description: 'zip file list'
+  dry_run:
+    description: 'Set to true to validate the request parameters and access permissions without modifying the function code.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'layers'
+  color: 'gray-dark'
