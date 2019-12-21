@@ -57,7 +57,7 @@ jobs:
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: gorush
-          source: example/main.go
+          source: example/index.js
 ```
 
 Set dry run mode to validate the request parameters and access permissions without modifying the function code.
