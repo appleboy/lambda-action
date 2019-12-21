@@ -2,17 +2,42 @@ name: deploy to lambda
 on: [push]
 jobs:
 
-  deploy:
-    name: deploy lambda function
+  deploy_zip:
+    name: deploy lambda function from zip
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        go-version: [1.13.x]
     steps:
       - name: checkout source code
         uses: actions/checkout@v1
-      - name: default deploy
-        uses: appleboy/ssh-action@master
+      - name: Install Go
+        uses: actions/setup-go@v1
+        with:
+          go-version: ${{ matrix.go-version }}
+      - name: Build binary
+        run: |
+          cd example && GOOS=linux go build -v -a -o main main.go && zip deployment.zip main
+      - name: deploy zip
+        uses: appleboy/lambda-action@master
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: gorush
-          zip_file: output.zip
+          zip_file: example/deployment.zip
+
+  # deploy_source:
+  #   name: deploy lambda from source
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: checkout source code
+  #       uses: actions/checkout@v1
+  #     - name: default deploy
+  #       uses: appleboy/lambda-action@master
+  #       with:
+  #         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  #         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  #         aws_region: ${{ secrets.AWS_REGION }}
+  #         function_name: gorush
+  #         source: example/main.go
