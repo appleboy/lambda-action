@@ -95,6 +95,7 @@ See [action.yml](./action.yml) for more detailed information.
 * s3_bucket - An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
 * s3_key - The Amazon S3 key of the deployment package.
 * dry_run - Set to true to validate the request parameters and access permissions without modifying the function code.
+* debug - Show debug message after upload the lambda successfully (default as `false`).
 
 ## AWS Policy
 

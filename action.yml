@@ -27,6 +27,8 @@ inputs:
     description: 'zip file list'
   dry_run:
     description: 'Set to true to validate the request parameters and access permissions without modifying the function code.'
+  debug:
+    description: 'Show debug message after upload the lambda successfully.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
