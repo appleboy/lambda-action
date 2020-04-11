@@ -83,6 +83,30 @@ jobs:
         dry_run: true
 ```
 
+Deploy from a specific branch, `master` or `release`.
+
+```yaml
+name: deploy to lambda
+on: [push]
+jobs:
+
+  deploy:
+    name: deploy lambda function
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: AWS Lambda Deploy
+      if: github.ref == 'refs/heads/master'
+      uses: appleboy/lambda-action
+      with:
+        aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws_region: ${{ secrets.AWS_REGION }}
+        function_name: gorush
+        zip_file: output.zip
+        dry_run: true
+```
+
 ## Input variables
 
 See [action.yml](./action.yml) for more detailed information.
