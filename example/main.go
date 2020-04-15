@@ -11,6 +11,9 @@ import (
 
 func helloHandler(c *gin.Context) {
 	name := c.Param("name")
+	log.Println("=======================================")
+	log.Println("name: " + name)
+	log.Println("=======================================")
 	c.String(http.StatusOK, "Hello %s, welcome to Gin API", name)
 }
 
