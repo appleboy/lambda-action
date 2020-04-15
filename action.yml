@@ -29,6 +29,11 @@ inputs:
     description: 'Set to true to validate the request parameters and access permissions without modifying the function code.'
   debug:
     description: 'Show debug message after upload the lambda successfully.'
+  publish:
+    description: 'Set to true to publish a new version of the function after updating the code.'
+    default: true
+  reversion_id:
+    description: 'Only update the function if the revision ID matches the ID that is specified.'
 runs:
   using: 'docker'
   image: 'Dockerfile'

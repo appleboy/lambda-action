@@ -120,6 +120,8 @@ See [action.yml](./action.yml) for more detailed information.
 * s3_key - The Amazon S3 key of the deployment package.
 * dry_run - Set to true to validate the request parameters and access permissions without modifying the function code.
 * debug - Show debug message after upload the lambda successfully (default as `false`).
+* publish - Set to true to publish a new version of the function after updating the code. (default as `true`).
+* reversion_id - Only update the function if the revision ID matches the ID that is specified.
 
 ## AWS Policy
 
