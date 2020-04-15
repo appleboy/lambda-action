@@ -1,4 +1,4 @@
-FROM appleboy/drone-lambda:1.1.3-linux-amd64
+FROM appleboy/drone-lambda
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
