@@ -73,7 +73,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: AWS Lambda Deploy
-      uses: appleboy/lambda-action
+      uses: appleboy/lambda-action@master
       with:
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -97,7 +97,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: AWS Lambda Deploy
       if: github.ref == 'refs/heads/master'
-      uses: appleboy/lambda-action
+      uses: appleboy/lambda-action@master
       with:
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
