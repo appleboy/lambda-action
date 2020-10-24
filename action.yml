@@ -42,6 +42,8 @@ inputs:
     default: 0
   handler:
     description: 'The name of the method within your code that Lambda calls to execute your function.'
+  role:
+    description: 'The Amazon Resource Name (ARN) of the function's execution role.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
