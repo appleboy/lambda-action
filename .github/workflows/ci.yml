@@ -62,7 +62,7 @@ jobs:
           function_name: gorush
           zip_file: example/deployment.zip
           debug: true
-          role: arn:aws:iam::502946233425:role/test1234
+          role: arn:aws:iam::502946233425:role/service-role/gorush-role-8nb845iz
           dry_run: true
 
       - name: update runtime
