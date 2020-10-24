@@ -74,7 +74,7 @@ jobs:
           function_name: gorush
           zip_file: example/deployment.zip
           debug: true
-          runtime: nodejs10.x
+          runtime: nodejs12.x
           dry_run: true
 
   # deploy_source:
