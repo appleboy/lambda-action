@@ -42,6 +42,17 @@ jobs:
           # origin value is "hello"
           handler: foobar
 
+      - name: dry run
+        uses: ./
+        with:
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_region: ${{ secrets.AWS_REGION }}
+          function_name: gorush
+          zip_file: example/deployment.zip
+          debug: true
+          dry_run: true
+
   # deploy_source:
   #   name: deploy lambda from source
   #   runs-on: ubuntu-latest
