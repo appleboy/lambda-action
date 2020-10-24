@@ -35,6 +35,9 @@ jobs:
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: gorush
           zip_file: example/deployment.zip
+          memory_size: 128
+          timeout: 10
+          handler: foobar
 ```
 
 Deploy lambda function with source file
