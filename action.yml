@@ -44,6 +44,8 @@ inputs:
     description: 'The name of the method within your code that Lambda calls to execute your function.'
   role:
     description: 'The Amazon Resource Name (ARN) of the function execution role.'
+  runtime:
+    description: 'The identifier of the function runtime.'
 runs:
   using: 'docker'
   image: 'Dockerfile'

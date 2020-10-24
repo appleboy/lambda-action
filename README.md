@@ -129,6 +129,7 @@ See [action.yml](./action.yml) for more detailed information.
 * timeout - The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
 * handler - The name of the method within your code that Lambda calls to execute your function.
 * role - The function's execution role. Pattern: `arn:(aws[a-zA-Z-]*)?:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+`
+* runtime - The identifier of the function's runtime. `nodejs10.x | nodejs12.x | java8 | java8.al2 | java11 | python2.7 | python3.6 | python3.7 | python3.8 | dotnetcore2.1 | dotnetcore3.1 | go1.x | ruby2.5 | ruby2.7 | provided | provided.al2`
 
 See the [UpdateFunctionConfiguration](https://docs.amazonaws.cn/en_us/lambda/latest/dg/API_UpdateFunctionConfiguration.html) for detail information.
 
