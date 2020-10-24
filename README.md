@@ -128,6 +128,7 @@ See [action.yml](./action.yml) for more detailed information.
 * memory_size - The amount of memory that your function has access to. Increasing the function's memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
 * timeout - The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
 * handler - The name of the method within your code that Lambda calls to execute your function.
+* role - The function's execution role. Pattern: `arn:(aws[a-zA-Z-]*)?:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+`
 
 ## AWS Policy
 
