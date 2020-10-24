@@ -27,6 +27,7 @@ jobs:
           function_name: gorush
           zip_file: example/deployment.zip
           debug: true
+          memory_size: 128
 
   # deploy_source:
   #   name: deploy lambda from source
