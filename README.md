@@ -130,6 +130,8 @@ See [action.yml](./action.yml) for more detailed information.
 * handler - The name of the method within your code that Lambda calls to execute your function.
 * role - The function's execution role. Pattern: `arn:(aws[a-zA-Z-]*)?:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+`
 
+See the [UpdateFunctionConfiguration](https://docs.amazonaws.cn/en_us/lambda/latest/dg/API_UpdateFunctionConfiguration.html) for detail information.
+
 ## AWS Policy
 
 Add the following AWS policy if you want to integrate with GitHub Actions.
