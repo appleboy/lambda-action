@@ -38,6 +38,8 @@ jobs:
           memory_size: 128
           timeout: 10
           handler: foobar
+          role: arn:aws:iam::xxxxxxxxxxx:role/test1234
+          runtime: nodejs10.x
 ```
 
 Deploy lambda function with source file
