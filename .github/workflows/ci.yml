@@ -28,6 +28,7 @@ jobs:
           zip_file: example/deployment.zip
           debug: true
           memory_size: 128
+          timeout: 10
 
   # deploy_source:
   #   name: deploy lambda from source
