@@ -36,8 +36,10 @@ inputs:
     description: 'Only update the function if the revision ID matches the ID that is specified.'
   memory_size:
     description: 'The amount of memory that your function has access to. Increasing the function memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.'
+    default: 0
   timeout:
     description: 'The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.'
+    default: 0
   handler:
     description: 'The name of the method within your code that Lambda calls to execute your function.'
 runs:
