@@ -29,6 +29,8 @@ jobs:
           debug: true
           memory_size: 128
           timeout: 10
+          # origin value is "hello"
+          handler: foobar
 
   # deploy_source:
   #   name: deploy lambda from source
