@@ -122,6 +122,9 @@ See [action.yml](./action.yml) for more detailed information.
 * debug - Show debug message after upload the lambda successfully (default as `false`).
 * publish - Set to true to publish a new version of the function after updating the code. (default as `true`).
 * reversion_id - Only update the function if the revision ID matches the ID that is specified.
+* memory_size - The amount of memory that your function has access to. Increasing the function's memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
+* timeout - The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
+* handler - The name of the method within your code that Lambda calls to execute your function.
 
 ## AWS Policy
 
