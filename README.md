@@ -149,7 +149,8 @@ Add the following AWS policy if you want to integrate with GitHub Actions.
         "s3:PutObject",
         "iam:ListRoles",
         "lambda:UpdateFunctionCode",
-        "lambda:CreateFunction"
+        "lambda:CreateFunction",
+        "lambda:UpdateFunctionConfiguration"
       ],
       "Resource": "*"
     }
