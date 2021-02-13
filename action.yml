@@ -46,6 +46,8 @@ inputs:
     description: 'The Amazon Resource Name (ARN) of the function execution role.'
   runtime:
     description: 'The identifier of the function runtime.'
+  environment:
+    description: 'Lambda Environment variables.'
 runs:
   using: 'docker'
   image: 'Dockerfile'

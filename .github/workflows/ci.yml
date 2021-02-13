@@ -26,6 +26,7 @@ jobs:
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: gorush
           zip_file: example/deployment.zip
+          environment: foo=bar,author=appleboy
           debug: true
 
       - name: update config
