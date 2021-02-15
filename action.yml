@@ -48,6 +48,12 @@ inputs:
     description: 'The identifier of the function runtime.'
   environment:
     description: 'Lambda Environment variables.'
+  image_uri:
+    description: 'URI of a container image in the Amazon ECR registry.'
+  subnets:
+    description: 'Select the VPC subnets for Lambda to use to set up your VPC configuration.'
+  securitygroups:
+    description: 'Choose the VPC security groups for Lambda to use to set up your VPC configuration.'
 runs:
   using: 'docker'
   image: 'Dockerfile'

@@ -158,6 +158,9 @@ See [action.yml](./action.yml) for more detailed information.
 * role - The function's execution role. Pattern: `arn:(aws[a-zA-Z-]*)?:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+`
 * runtime - The identifier of the function's runtime. `nodejs10.x | nodejs12.x | java8 | java8.al2 | java11 | python2.7 | python3.6 | python3.7 | python3.8 | dotnetcore2.1 | dotnetcore3.1 | go1.x | ruby2.5 | ruby2.7 | provided | provided.al2`
 * environment - Lambda Environment variables. example: `foo=bar,author=appleboy`
+* image_uri - URI of a container image in the Amazon ECR registry.
+* subnets - Select the VPC subnets for Lambda to use to set up your VPC configuration.
+* securitygroups - Choose the VPC security groups for Lambda to use to set up your VPC configuration.
 
 See the [UpdateFunctionConfiguration](https://docs.amazonaws.cn/en_us/lambda/latest/dg/API_UpdateFunctionConfiguration.html) for detail information.
 
