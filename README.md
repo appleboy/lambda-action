@@ -166,7 +166,7 @@ See the [UpdateFunctionConfiguration](https://docs.amazonaws.cn/en_us/lambda/lat
 
 ## AWS Policy
 
-Add the following AWS policy if you want to integrate with GitHub Actions.
+Add the following AWS policy if you want to integrate with GitHub Actions. Please change `REGION`, `ACCUNT` and `LAMBDA_NAME` variable to your specfic data.
 
 ```json
 {
@@ -181,7 +181,7 @@ Add the following AWS policy if you want to integrate with GitHub Actions.
         "lambda:CreateFunction",
         "lambda:UpdateFunctionConfiguration"
       ],
-      "Resource": "*"
+      "Resource": "arn:aws:lambda:${REGION}:${ACCUNT}:function:${LAMBDA_NAME}"
     }
   ]
 }
