@@ -88,6 +88,17 @@ jobs:
           runtime: nodejs12.x
           dry_run: true
 
+      - name: deploy description
+        uses: ./
+        with:
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_region: ${{ secrets.AWS_REGION }}
+          function_name: gorush
+          zip_file: example/deployment.zip
+          debug: true
+          description: update description from github actions
+
   # deploy_source:
   #   name: deploy lambda from source
   #   runs-on: ubuntu-latest

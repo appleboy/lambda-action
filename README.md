@@ -161,6 +161,7 @@ See [action.yml](./action.yml) for more detailed information.
 * image_uri - URI of a container image in the Amazon ECR registry.
 * subnets - Select the VPC subnets for Lambda to use to set up your VPC configuration.
 * securitygroups - Choose the VPC security groups for Lambda to use to set up your VPC configuration.
+* description - A description of the function.
 
 See the [UpdateFunctionConfiguration](https://docs.amazonaws.cn/en_us/lambda/latest/dg/API_UpdateFunctionConfiguration.html) for detail information.
 

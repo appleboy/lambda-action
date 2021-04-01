@@ -54,6 +54,8 @@ inputs:
     description: 'Select the VPC subnets for Lambda to use to set up your VPC configuration.'
   securitygroups:
     description: 'Choose the VPC security groups for Lambda to use to set up your VPC configuration.'
+  description:
+    description: 'A description of the function.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
