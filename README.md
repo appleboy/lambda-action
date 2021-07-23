@@ -162,6 +162,7 @@ See [action.yml](./action.yml) for more detailed information.
 * subnets - Select the VPC subnets for Lambda to use to set up your VPC configuration.
 * securitygroups - Choose the VPC security groups for Lambda to use to set up your VPC configuration.
 * description - A description of the function.
+* layers - A list of function layers, to add to the function's execution environment. Specify each layer by its ARN, including the version.
 
 See the [UpdateFunctionConfiguration](https://docs.amazonaws.cn/en_us/lambda/latest/dg/API_UpdateFunctionConfiguration.html) for detail information.
 
