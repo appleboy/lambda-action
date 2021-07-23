@@ -49,7 +49,7 @@ inputs:
   environment:
     description: 'Lambda Environment variables.'
   layers:
-    description: 'A list of function layers, to add to the function's execution environment. Specify each layer by its ARN, including the version'
+    description: 'A list of function layers, to add to the function execution environment. Specify each layer by its ARN, including the version'
   image_uri:
     description: 'URI of a container image in the Amazon ECR registry.'
   subnets:
