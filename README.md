@@ -137,6 +137,34 @@ jobs:
 +       environment: foo=bar,author=appleboy
 ```
 
+Add multiple environment:
+
+```diff
+name: deploy to lambda
+on: [push]
+jobs:
+
+  deploy:
+    name: deploy lambda function
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: AWS Lambda Deploy
+      if: github.ref == 'refs/heads/master'
+      uses: appleboy/lambda-action@master
+      with:
+        aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws_region: ${{ secrets.AWS_REGION }}
+        function_name: gorush
+        zip_file: output.zip
+        dry_run: true
++       layers: arn-layer1,arn-layer2
+        environment: foo=bar,author=appleboy
+-        environment: foo=bar,author=appleboy,example=
+# Remind: this won't work, be aware of empty environment variable
+```
+
 ## Input variables
 
 See [action.yml](./action.yml) for more detailed information.
