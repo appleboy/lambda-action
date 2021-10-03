@@ -137,7 +137,7 @@ jobs:
 +       environment: foo=bar,author=appleboy
 ```
 
-Add multiple environment:
+Add multiple layers:
 
 ```diff
 name: deploy to lambda
