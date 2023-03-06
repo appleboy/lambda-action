@@ -156,7 +156,7 @@ See [action.yml](./action.yml) for more detailed information.
 * timeout - The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
 * handler - The name of the method within your code that Lambda calls to execute your function.
 * role - The function's execution role. Pattern: `arn:(aws[a-zA-Z-]*)?:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+`
-* runtime - The identifier of the function's runtime. `nodejs10.x | nodejs12.x | java8 | java8.al2 | java11 | python2.7 | python3.6 | python3.7 | python3.8 | dotnetcore2.1 | dotnetcore3.1 | go1.x | ruby2.5 | ruby2.7 | provided | provided.al2`
+* runtime - The identifier of the function's runtime. `nodejs12.x | nodejs14.x | nodejs16.x | java8 | java8.al2 | java11 | python2.7 | python3.6 | python3.7 | python3.8 | dotnetcore2.1 | dotnetcore3.1 | go1.x | ruby2.5 | ruby2.7 | provided | provided.al2`
 * environment - Lambda Environment variables. example: `foo=bar,author=appleboy`
 * image_uri - URI of a container image in the Amazon ECR registry.
 * subnets - Select the VPC subnets for Lambda to use to set up your VPC configuration.
