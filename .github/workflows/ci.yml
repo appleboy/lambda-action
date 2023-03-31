@@ -12,7 +12,7 @@ jobs:
       - name: checkout source code
         uses: actions/checkout@v1
       - name: Install Go
-        uses: actions/setup-go@v1
+        uses: actions/setup-go@v4
         with:
           go-version: ${{ matrix.go-version }}
       - name: Build binary
