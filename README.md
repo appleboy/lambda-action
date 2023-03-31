@@ -19,7 +19,7 @@ jobs:
         go-version: [1.20.x]
     steps:
       - name: checkout source code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
       - name: Install Go
         uses: actions/setup-go@v1
         with:
@@ -28,7 +28,7 @@ jobs:
         run: |
           cd example && CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -a -o main main.go && zip deployment.zip main
       - name: default deploy
-        uses: appleboy/lambda-action@master
+        uses: appleboy/lambda-action@v0.1.5
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -54,9 +54,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout source code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
       - name: default deploy
-        uses: appleboy/lambda-action@master
+        uses: appleboy/lambda-action@v0.1.5
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -76,9 +76,9 @@ jobs:
     name: deploy lambda function
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: AWS Lambda Deploy
-      uses: appleboy/lambda-action@master
+      uses: appleboy/lambda-action@v0.1.5
       with:
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -99,10 +99,10 @@ jobs:
     name: deploy lambda function
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: AWS Lambda Deploy
       if: github.ref == 'refs/heads/master'
-      uses: appleboy/lambda-action@master
+      uses: appleboy/lambda-action@v0.1.5
       with:
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -123,10 +123,10 @@ jobs:
     name: deploy lambda function
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: AWS Lambda Deploy
       if: github.ref == 'refs/heads/master'
-      uses: appleboy/lambda-action@master
+      uses: appleboy/lambda-action@v0.1.5
       with:
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
