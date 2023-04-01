@@ -28,7 +28,7 @@ jobs:
         run: |
           cd example && CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -a -o main main.go && zip deployment.zip main
       - name: default deploy
-        uses: appleboy/lambda-action@v0.1.5
+        uses: appleboy/lambda-action@v0.1.6
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -56,7 +56,7 @@ jobs:
       - name: checkout source code
         uses: actions/checkout@v3
       - name: default deploy
-        uses: appleboy/lambda-action@v0.1.5
+        uses: appleboy/lambda-action@v0.1.6
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -78,7 +78,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: AWS Lambda Deploy
-      uses: appleboy/lambda-action@v0.1.5
+      uses: appleboy/lambda-action@v0.1.6
       with:
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -102,7 +102,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: AWS Lambda Deploy
       if: github.ref == 'refs/heads/master'
-      uses: appleboy/lambda-action@v0.1.5
+      uses: appleboy/lambda-action@v0.1.6
       with:
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -126,7 +126,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: AWS Lambda Deploy
       if: github.ref == 'refs/heads/master'
-      uses: appleboy/lambda-action@v0.1.5
+      uses: appleboy/lambda-action@v0.1.6
       with:
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
