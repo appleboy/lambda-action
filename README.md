@@ -189,3 +189,26 @@ Add the following AWS policy if you want to integrate with GitHub Actions. Pleas
   ]
 }
 ```
+
+Our function needs permission to upload trace data to [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html). When you activate tracing in the Lambda console, Lambda adds the required permissions to your function's execution role. Otherwise, add the [AWSXRayDaemonWriteAccess](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/AWSXRayDaemonWriteAccess) policy to the execution role.
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords",
+        "xray:GetSamplingRules",
+        "xray:GetSamplingTargets",
+        "xray:GetSamplingStatisticSummaries"
+      ],
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}
+```
