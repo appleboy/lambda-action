@@ -163,6 +163,7 @@ See [action.yml](./action.yml) for more detailed information.
 * securitygroups - Choose the VPC security groups for Lambda to use to set up your VPC configuration.
 * description - A description of the function.
 * layers - A list of function layers, to add to the function's execution environment. Specify each layer by its ARN, including the version.
+* tracing_mode - Set Mode to `Active` to sample and trace a subset of incoming requests with X-Ray.
 
 See the [UpdateFunctionConfiguration](https://docs.amazonaws.cn/en_us/lambda/latest/dg/API_UpdateFunctionConfiguration.html) for detail information.
 
