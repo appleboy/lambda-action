@@ -58,6 +58,9 @@ inputs:
     description: 'Choose the VPC security groups for Lambda to use to set up your VPC configuration.'
   description:
     description: 'A description of the function.'
+  tracing_mode:
+    description: 'Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.'
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
