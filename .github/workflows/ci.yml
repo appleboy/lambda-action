@@ -120,7 +120,7 @@ jobs:
           zip_file: example/deployment.zip
           debug: true
           publish: false
-          max_attempts: 300
+          max_attempts: 200
 
   # deploy_source:
   #   name: deploy lambda from source
