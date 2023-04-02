@@ -2,6 +2,8 @@
 
 [GitHub Action](https://developer.github.com/actions/) for deploying Lambda code to an existing function
 
+![logo](./infra/infra.svg)
+
 ## Usage
 
 Upload zip file to AWS Lambda function.

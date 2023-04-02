@@ -1,0 +1,38 @@
+github: GitHub {
+  icon: https://icons.terrastruct.com/dev%2Fgithub.svg
+  style: {
+    stroke: green
+    font-color: green
+    fill: white
+  }
+}
+
+github_actions: GitHub Actions {
+  lambda_action: Lambda Action {
+    icon: https://icons.terrastruct.com/dev%2Fgithub.svg
+    style.multiple: true
+  }
+  style: {
+    stroke: blue
+    font-color: purple
+    stroke-dash: 3
+    fill: white
+  }
+}
+
+aws: AWS Cloud VPC {
+  style: {
+    stroke: orange
+    font-color: purple
+    stroke-dash: 3
+    fill: white
+  }
+  lambda: Lambda{
+    icon: https://icons.terrastruct.com/aws%2FCompute%2FAWS-Lambda.svg
+    style.multiple: true
+    shape: parallelogram
+  }
+}
+
+github -> github_actions: GitHub Action Flow
+github_actions -> aws
