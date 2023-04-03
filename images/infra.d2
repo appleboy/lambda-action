@@ -5,6 +5,7 @@ github: GitHub {
   icon: https://icons.terrastruct.com/dev%2Fgithub.svg
   style: {
     font-color: green
+    font-size: 30
   }
 }
 
@@ -23,15 +24,24 @@ github_actions: GitHub Actions {
 
 aws: AWS Cloud VPC {
   style: {
-    stroke: orange
     font-color: purple
-    stroke-dash: 3
     fill: white
+    opacity: 0.5
   }
-  lambda: Lambda {
+  lambda01: Lambda01 {
     icon: https://icons.terrastruct.com/aws%2FCompute%2FAWS-Lambda.svg
-    style.multiple: true
     shape: parallelogram
+    style.fill: "#B6DDF6"
+  }
+  lambda02: Lambda02 {
+    icon: https://icons.terrastruct.com/aws%2FCompute%2FAWS-Lambda.svg
+    shape: parallelogram
+    style.fill: "#B6DDF6"
+  }
+  lambda03: Lambda03 {
+    icon: https://icons.terrastruct.com/aws%2FCompute%2FAWS-Lambda.svg
+    shape: parallelogram
+    style.fill: "#B6DDF6"
   }
 }
 
@@ -41,7 +51,19 @@ github -> github_actions: GitHub Action Flow {
     font-size: 20
   }
 }
-github_actions -> aws: Update Lambda {
+github_actions -> aws.lambda01: Update Lambda {
+  style: {
+    animated: true
+    font-size: 20
+  }
+}
+github_actions -> aws.lambda02: Update Lambda {
+  style: {
+    animated: true
+    font-size: 20
+  }
+}
+github_actions -> aws.lambda03: Update Lambda {
   style: {
     animated: true
     font-size: 20
