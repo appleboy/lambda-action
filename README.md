@@ -185,7 +185,8 @@ Add the following AWS policy if you want to integrate with GitHub Actions. Pleas
         "iam:ListRoles",
         "lambda:UpdateFunctionCode",
         "lambda:CreateFunction",
-        "lambda:UpdateFunctionConfiguration"
+        "lambda:UpdateFunctionConfiguration",
+        "lambda:GetFunctionConfiguration"
       ],
       "Resource": "arn:aws:lambda:${REGION}:${ACCOUNT}:function:${LAMBDA_NAME}"
     }
