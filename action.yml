@@ -62,7 +62,7 @@ inputs:
     description: 'Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.'
   max_attempts:
     description: 'the maximum number of times the waiter should attempt to check the resource for the target state'
-    default: 300
+    default: 600
 
 runs:
   using: 'docker'
