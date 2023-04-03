@@ -1,11 +1,10 @@
 direction: right
 
 github: GitHub {
+  shape: image
   icon: https://icons.terrastruct.com/dev%2Fgithub.svg
   style: {
-    stroke: green
     font-color: green
-    fill: white
   }
 }
 
@@ -36,8 +35,18 @@ aws: AWS Cloud VPC {
   }
 }
 
-github -> github_actions: GitHub Action Flow
-github_actions -> aws: Update Lambda
+github -> github_actions: GitHub Action Flow {
+  style: {
+    animated: true
+    font-size: 20
+  }
+}
+github_actions -> aws: Update Lambda {
+  style: {
+    animated: true
+    font-size: 20
+  }
+}
 
 explanation: |md
   ```yaml
