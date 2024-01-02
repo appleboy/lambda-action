@@ -1,73 +1,73 @@
-name: 'AWS Lambda Deploy'
-description: 'Deploying Lambda code to an existing function'
-author: 'Bo-Yi Wu'
+name: "AWS Lambda Deploy"
+description: "Deploying Lambda code to an existing function"
+author: "Bo-Yi Wu"
 inputs:
   aws_region:
-    description: 'AWS Region'
-    default: 'us-east-1'
+    description: "AWS Region"
+    default: "us-east-1"
   aws_access_key_id:
-    description: 'AWS ACCESS KEY'
+    description: "AWS ACCESS KEY"
   aws_secret_access_key:
-    description: 'AWS SECRET KEY'
+    description: "AWS SECRET KEY"
   aws_session_token:
-    description: 'AWS Session token'
+    description: "AWS Session token"
   aws_profile:
-    description: 'AWS profile'
+    description: "AWS profile"
   function_name:
-    description: 'AWS lambda function name'
+    description: "AWS lambda function name"
   s3_bucket:
-    description: 'An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.'
+    description: "An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account."
   s3_key:
-    description: 'The Amazon S3 key of the deployment package.'
+    description: "The Amazon S3 key of the deployment package."
   s3_object_version:
-    description: 'AWS lambda s3 object version'
+    description: "AWS lambda s3 object version"
   zip_file:
-    description: 'AWS lambda zip file'
+    description: "AWS lambda zip file"
   source:
-    description: 'zip file list'
+    description: "zip file list"
   dry_run:
-    description: 'Set to true to validate the request parameters and access permissions without modifying the function code.'
+    description: "Set to true to validate the request parameters and access permissions without modifying the function code."
   debug:
-    description: 'Show debug message after upload the lambda successfully.'
+    description: "Show debug message after upload the lambda successfully."
   publish:
-    description: 'Set to true to publish a new version of the function after updating the code.'
+    description: "Set to true to publish a new version of the function after updating the code."
     default: true
   reversion_id:
-    description: 'Only update the function if the revision ID matches the ID that is specified.'
+    description: "Only update the function if the revision ID matches the ID that is specified."
   memory_size:
-    description: 'The amount of memory that your function has access to. Increasing the function memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.'
+    description: "The amount of memory that your function has access to. Increasing the function memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB."
     default: 0
   timeout:
-    description: 'The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.'
+    description: "The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds."
     default: 0
   handler:
-    description: 'The name of the method within your code that Lambda calls to execute your function.'
+    description: "The name of the method within your code that Lambda calls to execute your function."
   role:
-    description: 'The Amazon Resource Name (ARN) of the function execution role.'
+    description: "The Amazon Resource Name (ARN) of the function execution role."
   runtime:
-    description: 'The identifier of the function runtime.'
+    description: "The identifier of the function runtime."
   environment:
-    description: 'Lambda Environment variables.'
+    description: "Lambda Environment variables."
   layers:
-    description: 'A list of function layers, to add to the function execution environment. Specify each layer by its ARN, including the version'
+    description: "A list of function layers, to add to the function execution environment. Specify each layer by its ARN, including the version"
   image_uri:
-    description: 'URI of a container image in the Amazon ECR registry.'
+    description: "URI of a container image in the Amazon ECR registry."
   subnets:
-    description: 'Select the VPC subnets for Lambda to use to set up your VPC configuration.'
+    description: "Select the VPC subnets for Lambda to use to set up your VPC configuration."
   securitygroups:
-    description: 'Choose the VPC security groups for Lambda to use to set up your VPC configuration.'
+    description: "Choose the VPC security groups for Lambda to use to set up your VPC configuration."
   description:
-    description: 'A description of the function.'
+    description: "A description of the function."
   tracing_mode:
-    description: 'Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.'
+    description: "Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray."
   max_attempts:
-    description: 'the maximum number of times the waiter should attempt to check the resource for the target state'
+    description: "the maximum number of times the waiter should attempt to check the resource for the target state"
     default: 600
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
 
 branding:
-  icon: 'layers'
-  color: 'gray-dark'
+  icon: "layers"
+  color: "gray-dark"
