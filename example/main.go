@@ -52,7 +52,7 @@ func main() {
 	}
 	addr := ":" + port
 	log.Println("=======================================")
-	log.Println("Runinng gin-lambda server in " + addr)
+	log.Println("Running gin-lambda server in " + addr)
 	log.Println("=======================================")
 	if mode == "production" {
 		log.Fatal(gateway.ListenAndServe(addr, routerEngine()))
