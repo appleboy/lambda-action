@@ -167,6 +167,7 @@ See [action.yml](./action.yml) for more detailed information.
 * layers - A list of function layers, to add to the function's execution environment. Specify each layer by its ARN, including the version.
 * tracing_mode - Set Mode to `Active` to sample and trace a subset of incoming requests with X-Ray.
 * max_attempts - The maximum number of times the waiter should attempt to check the resource for the target state.
+* architectures - The instruction set architecture that the function supports. `arm64 | x86_64`
 
 See the [UpdateFunctionConfiguration](https://docs.amazonaws.cn/en_us/lambda/latest/dg/API_UpdateFunctionConfiguration.html) for detail information.
 

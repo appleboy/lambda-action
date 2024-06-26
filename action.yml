@@ -63,6 +63,8 @@ inputs:
   max_attempts:
     description: "the maximum number of times the waiter should attempt to check the resource for the target state"
     default: 600
+  architectures:
+    description: "The instruction set architecture that the function supports. Architecture is a string array with one of the valid values. The default architecture value is x86_64."
 
 runs:
   using: "docker"
