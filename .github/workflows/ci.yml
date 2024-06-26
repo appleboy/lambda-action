@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        go-version: ["1.20", 1.21]
+        go-version: ["1.21", "1.22"]
     steps:
       - name: checkout source code
         uses: actions/checkout@v4
@@ -25,6 +25,7 @@ jobs:
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: gorush
+          runtime: nodejs20.x
           zip_file: example/deployment.zip
 
       - name: update env
