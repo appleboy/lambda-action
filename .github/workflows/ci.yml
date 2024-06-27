@@ -127,5 +127,6 @@ jobs:
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: gorush
           source: example/main.go,example/go.mod,example/go.sum
-          subnets: subnet-05905c9e0ffb7e552,subnet-02f8ede18cd4001b5
+          subnets: subnet-05905c9e0ffb7e552
           securitygroups: sg-0262ba785ced7600e
+          debug: true
