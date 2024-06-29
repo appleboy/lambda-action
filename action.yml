@@ -65,6 +65,8 @@ inputs:
     default: 600
   architectures:
     description: "The instruction set architecture that the function supports. Architecture is a string array with one of the valid values. The default architecture value is x86_64."
+  ipv6_dual_stack:
+    description: "Enables or disables dual-stack IPv6 support in the VPC configuration"
 
 runs:
   using: "docker"

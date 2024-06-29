@@ -168,6 +168,7 @@ See [action.yml](./action.yml) for more detailed information.
 * tracing_mode - Set Mode to `Active` to sample and trace a subset of incoming requests with X-Ray.
 * max_attempts - The maximum number of times the waiter should attempt to check the resource for the target state.
 * architectures - The instruction set architecture that the function supports. `arm64 | x86_64`
+* ipv6_dual_stack - Enables or disables dual-stack IPv6 support in the VPC configuration
 
 See the [UpdateFunctionConfiguration](https://docs.amazonaws.cn/en_us/lambda/latest/dg/API_UpdateFunctionConfiguration.html) for detail information.
 
