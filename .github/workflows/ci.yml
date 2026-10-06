@@ -1,12 +1,14 @@
 name: deploy to lambda
-on: [push]
+on:
+  push:
+    branches: [master]
 jobs:
   deploy_zip:
     name: deploy lambda function from zip
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        go-version: ["1.22"]
+        go-version: ["1.26"]
     steps:
       - name: checkout source code
         uses: actions/checkout@v7
